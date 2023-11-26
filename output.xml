@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.12 on win32)" generated="20231127 01:02:53.902" rpa="false" schemaversion="3">
+<suite id="s1" name="Web" source="c:\Users\winah\OneDrive\Documents\Automation-test\Web\Test\web.robot">
+<test id="s1-t1" name="Scenario: User want to register in Ralali" line="7">
+<kw name="Given user open browser to ralali" library="resource">
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>25s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231127 01:02:54.231" endtime="20231127 01:02:54.231"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${BASE URL}</arg>
+<arg>${Browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20231127 01:02:54.237" level="INFO">Opening browser 'Chrome' to base url 'https://www.ralali.com/'.</msg>
+<status status="PASS" starttime="20231127 01:02:54.236" endtime="20231127 01:02:57.899"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20231127 01:02:57.899" endtime="20231127 01:02:58.040"/>
+</kw>
+<status status="PASS" starttime="20231127 01:02:54.231" endtime="20231127 01:02:58.040"/>
+</kw>
+<kw name="When user click button login" library="resource">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231127 01:02:58.045" endtime="20231127 01:02:59.403"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_login}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:02:59.408" level="INFO">Clicking element '//a[@href='/login']'.</msg>
+<status status="PASS" starttime="20231127 01:02:59.403" endtime="20231127 01:03:00.326"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${text_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:00.326" level="INFO">Clicking element '//a[text()="Daftar"]'.</msg>
+<status status="PASS" starttime="20231127 01:03:00.326" endtime="20231127 01:03:00.735"/>
+</kw>
+<status status="PASS" starttime="20231127 01:02:58.040" endtime="20231127 01:03:00.735"/>
+</kw>
+<kw name="And user complete form register" library="resource">
+<kw name="Wait Until Element Is Enabled" library="SeleniumLibrary">
+<arg>${card_individu}</arg>
+<doc>Waits until the element ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20231127 01:03:00.735" endtime="20231127 01:03:01.914"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${card_individu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:01.914" level="INFO">Clicking element '//div[@data-testid='card-Individu']'.</msg>
+<status status="PASS" starttime="20231127 01:03:01.914" endtime="20231127 01:03:02.047"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_fullname}</arg>
+<arg>QA Engineer</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:02.049" level="INFO">Typing text 'QA Engineer' into text field '//input[@id='fullname']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.048" endtime="20231127 01:03:02.189"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<arg>henafrozen@gmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:02.189" level="INFO">Typing text 'henafrozen@gmail.com' into text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.189" endtime="20231127 01:03:02.339"/>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<arg>${input_fullname}</arg>
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<msg timestamp="20231127 01:03:02.366" level="INFO">Current page contains text field '//input[@id='fullname']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.339" endtime="20231127 01:03:02.366"/>
+</kw>
+<kw name="Page Should Contain Textfield" library="SeleniumLibrary">
+<arg>${input_username}</arg>
+<doc>Verifies text field ``locator`` is found from current page.</doc>
+<msg timestamp="20231127 01:03:02.384" level="INFO">Current page contains text field '//input[@id='username']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.366" endtime="20231127 01:03:02.384"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password}</arg>
+<arg>Aabnshsf12^</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:02.384" level="INFO">Typing text 'Aabnshsf12^' into text field '//input[@data-testid='input-password']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.384" endtime="20231127 01:03:02.506"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_password_confirm}</arg>
+<arg>Aabnshsf12^</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:02.506" level="INFO">Typing text 'Aabnshsf12^' into text field '//input[@data-testid='input-password-confirmation']'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.506" endtime="20231127 01:03:02.626"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${checkbox_register}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231127 01:03:02.626" endtime="20231127 01:03:02.916"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${checkbox_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:02.919" level="INFO">Clicking element '//span[@class='RegisterForm__Checkbox-sc-1ofjgrt-5 mgNsT']//span'.</msg>
+<status status="PASS" starttime="20231127 01:03:02.917" endtime="20231127 01:03:02.980"/>
+</kw>
+<kw name="Scroll Element Into View" library="SeleniumLibrary">
+<arg>${button_register}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" starttime="20231127 01:03:02.980" endtime="20231127 01:03:03.264"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${button_register}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:03.264" level="INFO">Clicking element '//button[@data-testid='button-submit']'.</msg>
+<status status="PASS" starttime="20231127 01:03:03.264" endtime="20231127 01:03:03.335"/>
+</kw>
+<status status="PASS" starttime="20231127 01:03:00.735" endtime="20231127 01:03:03.335"/>
+</kw>
+<kw name="Then fetch otp from email" library="resource">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${verif_email}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20231127 01:03:03.335" endtime="20231127 01:03:03.365"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${verif_email}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20231127 01:03:03.366" level="INFO">Clicking element '//div[@data-testid='channel-email']'.</msg>
+<status status="PASS" starttime="20231127 01:03:03.365" endtime="20231127 01:03:03.423"/>
+</kw>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>50s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20231127 01:03:03.423" endtime="20231127 01:03:03.428"/>
+</kw>
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>host=imap.gmail.com</arg>
+<arg>user=${to_EMAIL}</arg>
+<arg>password=${PASSWORD}</arg>
+<arg>is_secure=True</arg>
+<arg>ssl=993</arg>
+<arg>folder=Inbox</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20231127 01:03:03.428" endtime="20231127 01:03:04.524"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>Successfully opened mailbox.</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20231127 01:03:04.525" level="INFO">Successfully opened mailbox.</msg>
+<status status="PASS" starttime="20231127 01:03:04.524" endtime="20231127 01:03:04.525"/>
+</kw>
+<status status="PASS" starttime="20231127 01:03:03.335" endtime="20231127 01:03:04.526"/>
+</kw>
+<kw name="And get otp from email" library="resource">
+<kw name="Open Mailbox" library="ImapLibrary2">
+<arg>server=imap.gmail.com</arg>
+<arg>user=henafrozen@gmail.com</arg>
+<arg>password=${PASSWORD}</arg>
+<doc>Open IMAP email client session to given ``host`` with given ``user`` and ``password``.</doc>
+<status status="PASS" starttime="20231127 01:03:04.532" endtime="20231127 01:03:05.481"/>
+</kw>
+<kw name="Wait For Email" library="ImapLibrary2">
+<var>${LATEST}</var>
+<arg>fromEmail=${from_EMAIL}</arg>
+<arg>toEmail=${to_EMAIL}</arg>
+<arg>subject=${OTP_SUBJECT}</arg>
+<doc>Wait for email message to arrived base on any given filter criteria.
+Returns email index of the latest email message received.</doc>
+<msg timestamp="20231127 01:03:06.198" level="INFO">${LATEST} = 403</msg>
+<status status="PASS" starttime="20231127 01:03:05.486" endtime="20231127 01:03:06.203"/>
+</kw>
+<kw name="Get Email Body" library="ImapLibrary2">
+<var>${email_body}</var>
+<arg>${LATEST}</arg>
+<doc>Returns the decoded email body on multipart email message,
+otherwise returns the body text.</doc>
+<msg timestamp="20231127 01:03:06.557" level="FAIL">get_email_body called on multipart email 'Kode OTP Ralali untuk Anda'. Please first use method walk_multipart_email.</msg>
+<status status="FAIL" starttime="20231127 01:03:06.203" endtime="20231127 01:03:06.562"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${otp}</var>
+<arg>'text/plain' in ${email_body}</arg>
+<arg>or</arg>
+<arg>'text/html' in ${email_body}</arg>
+<arg>Extract OTP from Text</arg>
+<arg>${email_body}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="NOT RUN" starttime="20231127 01:03:06.562" endtime="20231127 01:03:06.562"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>//div[@class='Flex__StyledFlex-sc-1gmkxa6-0 kfGXIa']/input[@data-testid='otp-input-1']</arg>
+<arg>${otp}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" starttime="20231127 01:03:06.562" endtime="20231127 01:03:06.567"/>
+</kw>
+<status status="FAIL" starttime="20231127 01:03:04.531" endtime="20231127 01:03:06.567"/>
+</kw>
+<status status="FAIL" starttime="20231127 01:02:54.231" endtime="20231127 01:03:06.572">get_email_body called on multipart email 'Kode OTP Ralali untuk Anda'. Please first use method walk_multipart_email.</status>
+</test>
+<status status="FAIL" starttime="20231127 01:02:53.911" endtime="20231127 01:03:06.577"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Web">Web</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
